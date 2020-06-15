@@ -1,0 +1,13 @@
+{{> navigator }}
+
+<div class="modal-outer">
+  <form>
+    <h1>Delete {{ club.name }} ?</h1>
+    <div class="actions">
+      <button class="button" type="submit" formaction="/delete/{{ club.id }}" formmethod="POST">Delete</button>
+      <a class="button" href="/">Cancel</a>
+    </div>
+  </form>
+</div>
+
+{{> club-portraits }}
