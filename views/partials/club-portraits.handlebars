@@ -1,0 +1,12 @@
+<ul class="club-list">
+  {{#each clubs}}
+    <li class="club-overview">
+      <a class="club--view" href="club/{{ this.id }}">
+        <img src="{{ this.crestUrl }}" alt="club-crest">
+        <h2>{{ this.name }}</h2>
+      </a>
+      <a class="action action--edit" href="club/{{ this.id }}/edit">Edit</a>
+      <a class="action action--delete" href="delete/{{ this.id }}">Delete</a>
+    </li>
+  {{/each}}
+</ul>

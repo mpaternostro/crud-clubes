@@ -1,0 +1,30 @@
+.club-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 65vw;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.club-info img {
+  height: 250px;
+  width: 250px;
+  align-self: center;
+}
+
+.club-info > * {
+  margin: 9px;
+}
+
+#change-club-crest {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h5 {
+  align-self: end;
+}

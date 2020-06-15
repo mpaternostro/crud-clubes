@@ -1,0 +1,45 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navigator {
+  display: flex;
+  align-items: center;
+  max-width: 65vw;
+  padding: 5px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.navigator > * {
+  text-decoration: none;
+  color: #360c3a;
+  padding: 0 0.5em;
+  font-size: 24px;
+}
+
+.navigator--home img {
+  width: 128px;
+  color: white;
+}
+
+.button {
+  color: black;
+  background: white;
+  text-align: center;
+  font-size: 14px;
+  padding: 0.5em;
+  margin: 1em;
+  width: 20%;
+  border: 1px solid black;
+  text-decoration: none;
+  font-family: Helvetica;
+  box-shadow: -2px -2px 5px 1px #dfdfdf;
+  flex: 1;
+  cursor: pointer;
+}

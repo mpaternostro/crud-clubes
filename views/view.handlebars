@@ -1,0 +1,21 @@
+{{> navigator}}
+
+<div class="club-info">
+  <img src="{{club.crestUrl}}" alt="club-crest">
+  <h2>Name: {{club.name}}</h2>
+  <h3>TLA: {{club.tla}}</h3>
+  <h3>Short name: {{club.shortName}}</h3>
+  <h4>Founded: {{club.founded}}</h4>
+  <h4>Country: {{club.area.name}}</h4>
+  <h4>Address: {{club.address}}</h4>
+  <h4>Venue: {{club.venue}}</h4>
+  <h4>Phone: {{club.phone}}</h4>
+  <h4>Website: {{club.website}}</h4>
+  <h4>Email: {{club.email}}</h4>
+  <div class="actions">
+    <a class="button" href="/club/{{club.id}}/edit">Edit</a>
+    <a class="button" href="/delete/{{club.id}}">Delete</a>
+    <a class="button" href="/">Back</a>
+  </div>
+  <h5>Last updated: {{lastUpdated}}</h5>
+</div>
