@@ -7,7 +7,9 @@ const helpers = require('../helpers/routes');
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {
-    cb(null, 'public/uploads/');
+    const path = 'public/uploads';
+    fs.mkdirSync(path, { recursive: true });
+    cb(null, path);
   },
   filename(req, file, cb) {
     cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
