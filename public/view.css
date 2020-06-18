@@ -1,0 +1,9 @@
+.club-info {
+  grid-column: 1;
+  max-width: 65vw;
+  padding: 10px;
+}
+
+.club-info > * {
+  margin: 12px;
+}
