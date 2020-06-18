@@ -21,7 +21,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.render('edit', {
     pageTitle: 'New Club',
-    optionalStylesheet: '<link rel="stylesheet" href="/club.css">',
+    optionalStylesheet: '<link rel="stylesheet" href="/club.css"><link rel="stylesheet" href="/edit.css">',
   });
 });
 

@@ -1,29 +1,29 @@
 {{> navigator}}
 
-<form action="" method="POST" class="club-info" enctype="multipart/form-data">
-  <label for="crest-url" id="change-club-crest">
-    {{#if club}}
-      <img src="{{club.crestUrl}}" alt="club-crest">
-    {{else}}
-      <img src="https://svgsilh.com/svg/42451.svg" alt="club-crest">
-    {{/if}} 
+<form action="" method="POST" class="club-info-edit" enctype="multipart/form-data">
+  <label for="crest-url">
+  {{#if club}}
+    <img class="club-crest" src="{{club.crestUrl}}" alt="club-crest">
+  {{else}}
+    <img class="club-crest" src="https://svgsilh.com/svg/42451.svg" alt="club-crest">
+  {{/if}} 
   </label>
-  <h2>Name: <input type="text" name="name" value="{{club.name}}"></h2>
-  <h3>TLA: <input type="text" name="tla" value="{{club.tla}}" maxlength="3" placeholder="Max. 3 characters"></h3>
-  <h3>Short name: <input type="text" name="short-name" value="{{club.shortName}}"></h3>
-  <h3><label for="crest-url">Change club's crest: <input type="file" name="crest-url" id="crest-url"></label></h3>
-  <h4>Founded: <input type="number" name="foundation-date" value="{{club.founded}}"></h4>
-  <h4>Country: <input type="text" name="country" value="{{club.area.name}}"></h4>
-  <h4>Address: <input type="text" name="address" value="{{club.address}}"></h4>
-  <h4>Venue: <input type="text" name="venue" value="{{club.venue}}"></h4>
-  <h4>Phone: <input type="text" name="phone" value="{{club.phone}}"></h4>
-  <h4>Website: <input type="text" name="website" value="{{club.website}}"></h4>
-  <h4>Email: <input type="text" name="email" value="{{club.email}}"></h4>
+  <label><h2>Name: <input type="text" name="name" value="{{club.name}}"></h2></label>
+  <label><h3>TLA: <input type="text" name="tla" value="{{club.tla}}" maxlength="3" placeholder="Max. 3 characters"></h3></label>
+  <label><h3>Short name: <input type="text" name="short-name" value="{{club.shortName}}"></h3></label>
+  <label><h3><label for="crest-url">Change club's crest: <input type="file" name="crest-url" id="crest-url"></label></h3></label>
+  <label><h4>Founded: <input type="number" name="foundation-date" value="{{club.founded}}"></h4></label>
+  <label><h4>Country: <input type="text" name="country" value="{{club.area.name}}"></h4></label>
+  <label><h4>Address: <input type="text" name="address" size="40" value="{{club.address}}"></h4></label>
+  <label><h4>Venue: <input type="text" name="venue" value="{{club.venue}}"></h4></label>
+  <label><h4>Phone: <input type="text" name="phone" value="{{club.phone}}"></h4></label>
+  <label><h4>Website: <input type="text" name="website" value="{{club.website}}"></h4></label>
+  <label><h4>Email: <input type="text" name="email" value="{{club.email}}"></h4></label>
   <div class="actions">
     <button type="submit" name="id" value="{{club.id}}" class="button button--save">Save changes</button>
     <a href="." class="button button--cancel">Cancel</a>
   </div>
   {{#if lastUpdated}}
-    <h5>Last updated: {{lastUpdated}}</h5>
+    <h5 class="last-updated">Last updated: {{lastUpdated}}</h5>
   {{/if}}
 </form>

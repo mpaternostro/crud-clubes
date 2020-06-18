@@ -21,7 +21,7 @@ const editClub = (body, file, club) => {
   return editedClub;
 };
 
-function newClub(body, file) {
+const newClub = (body, file) => {
   const clubs = getClubs();
   const editedBody = cloneDeep(body);
   editedBody.id = Number(clubs[clubs.length - 1].id) + 1;
@@ -34,7 +34,7 @@ function newClub(body, file) {
     website, email, founded, clubColors, venue, crestUrl))();
 
   return club;
-}
+};
 
 exports.getClubs = getClubs;
 exports.editClub = editClub;
