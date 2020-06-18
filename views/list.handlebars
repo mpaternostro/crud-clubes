@@ -1,0 +1,44 @@
+{{> navigator}}
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Short Name</th>
+      <th>TLA</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>Founded</th>
+      <th>Venue</th>
+      <th colspan="4">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  {{#each clubs}}
+      <tr data-url="/club/{{this.name}}">
+        <td><img src="{{this.crestUrl}}" alt="club-crest"></td>
+        <th>{{this.name}}</th>
+        <td>{{this.shortName}}</td>
+        <td>{{this.tla}}</td>
+        <td>{{this.address}}</td>
+        <td>{{this.phone}}</td>
+        <td>{{this.website}}</td>
+        <td>{{this.founded}}</td>
+        <td>{{this.venue}}</td>
+        <td><a href="/club/{{this.id}}">View</a></td>
+        <td><a href="/club/{{this.id}}/edit">Edit</a></td>
+        <td><a href="/delete/{{this.id}}">Delete</a></td>
+        {{#if this.email}}
+        <td><a href="mailto:{{this.email}}">Email</a></td>
+        {{else}}
+        <td>No email found</td>
+        {{/if}}
+      </tr>
+    </a>
+  {{/each}}
+  </tbody>
+
+</table>
