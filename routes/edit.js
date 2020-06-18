@@ -5,7 +5,6 @@ const multer = require('multer');
 
 const helpers = require('../helpers/routes');
 
-// ESTA BIEN QUE LOS UPLOADS ESTEN EN PUBLIC ?
 const storage = multer.diskStorage({
   destination(req, file, cb) {
     cb(null, 'public/uploads/');
@@ -27,7 +26,7 @@ router.get(/\/\d+\/edit/, (req, res) => {
   const club = clubs.find(({ id }) => req.path.includes(id.toString()));
   res.render('edit', {
     pageTitle: club.name,
-    optionalStylesheet: '<link rel="stylesheet" href="/club.css">',
+    optionalStylesheet: '<link rel="stylesheet" href="/club.css"><link rel="stylesheet" href="/edit.css">',
     club,
     lastUpdated: new Date(club.lastUpdated),
   });
