@@ -1,6 +1,6 @@
 class Club {
   constructor(
-    id = 1045, areaName = 'England', name = '', shortName = '', tla = '',
+    id = 1, areaName = 'England', name = '', shortName = '', tla = '',
     address = '', phone = '', website = '',
     email = '', founded = 1900, clubColors = '', venue = '', crestUrl = '',
   ) {
